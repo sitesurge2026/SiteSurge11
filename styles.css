@@ -310,7 +310,6 @@ a:hover {
 .hero-title-accent {
   color: var(--white);
   display: inline-block;
-  text-shadow: 0 0 12px rgba(0, 230, 118, 0.25), 0 0 4px rgba(0, 230, 118, 0.35);
   animation: heroAccentFade 1.8s ease-out 0.6s forwards;
   opacity: 0;
 }
@@ -400,6 +399,14 @@ a:hover {
   line-height: 1.2;
 }
 
+.services-benefits-lead {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 65ch;
+  margin: 0 0 1.5rem;
+  line-height: 1.6;
+}
+
 .services-we-service-list {
   list-style: none;
   padding: 0;
@@ -409,10 +416,16 @@ a:hover {
 .services-we-service-list li {
   position: relative;
   padding-left: 1.75rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 1rem;
   color: var(--text);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.services-we-service-list li strong {
+  color: var(--white);
   font-weight: 800;
-  font-size: 1.05rem;
 }
 
 .services-we-service-list li:last-child {
@@ -423,6 +436,7 @@ a:hover {
   content: '✓';
   position: absolute;
   left: 0;
+  top: 0.15em;
   color: var(--green-light);
   font-weight: 800;
 }
@@ -1230,8 +1244,27 @@ a:hover {
   opacity: 0.7;
 }
 
-/* Mobile */
+/* Mobile – larger headings for readability */
 @media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: clamp(2rem, 8vw, 2.75rem);
+  }
+
+  .services-benefits-heading,
+  .challenges-heading,
+  .approach-heading {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+  }
+
+  .section-heading {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+  }
+
+  .pricing h2,
+  .hosting h2 {
+    font-size: clamp(2rem, 6vw, 2.25rem);
+  }
+
   .nav {
     display: none;
     position: absolute;
