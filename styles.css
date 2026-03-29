@@ -384,6 +384,121 @@ a:hover {
   margin-top: 0;
 }
 
+.hero-cta-dual {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-hero-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2rem;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--white);
+  background: transparent;
+  border: 2px solid var(--border-light);
+  border-radius: 12px;
+  text-decoration: none;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-hero-outline:hover {
+  border-color: var(--green);
+  color: var(--green-light);
+}
+
+.hero-trust {
+  margin: 2rem 0 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Section headings (Xtract-style) */
+.section-heading-lg {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: var(--white);
+  margin: 0 0 1rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.section-lead {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 56ch;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Services section (Xtract-style grid) */
+.services-section {
+  padding: 6rem 0;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.service-card:hover {
+  border-color: var(--green);
+  box-shadow: 0 0 24px var(--green-glow), 0 0 0 1px var(--green-glow-strong);
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--green-light);
+  margin: 0 0 0.75rem;
+}
+
+.service-card p {
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.service-tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.service-tags li {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  padding: 0.35rem 0.65rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
 /* Professional Services – Key Benefits style */
 .services-intro {
   padding: 5rem 0;
@@ -439,6 +554,333 @@ a:hover {
   top: 0.15em;
   color: var(--green-light);
   font-weight: 800;
+}
+
+/* Benefits section (Xtract-style) */
+.benefits-section {
+  padding: 6rem 0;
+  background: var(--bg-section);
+  border-top: 1px solid var(--border);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.benefit-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.benefit-card:hover {
+  border-color: var(--green);
+  box-shadow: 0 0 24px var(--green-glow), 0 0 0 1px var(--green-glow-strong);
+}
+
+.benefit-icon {
+  display: inline-block;
+  color: var(--green-light);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--white);
+  margin: 0 0 0.5rem;
+}
+
+.benefit-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+/* Pricing cards (Xtract-style) */
+.pricing-section {
+  padding: 6rem 0;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.pricing-card:hover {
+  border-color: var(--green);
+  box-shadow: 0 0 24px var(--green-glow), 0 0 0 1px var(--green-glow-strong);
+}
+
+.pricing-card-featured {
+  border-color: var(--green);
+  box-shadow: 0 0 0 1px var(--green-glow-strong);
+}
+
+.pricing-card-featured:hover {
+  box-shadow: 0 0 28px var(--green-glow), 0 0 0 2px var(--green-light);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -0.5rem;
+  right: 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--bg);
+  background: var(--green);
+  padding: 0.25rem 0.6rem;
+  border-radius: 8px;
+}
+
+.pricing-card h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--white);
+  margin: 0 0 0.5rem;
+}
+
+.pricing-amount {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--green-light);
+  margin: 0 0 0.25rem;
+}
+
+.pricing-note {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+
+.pricing-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0 0 3rem;
+  font-weight: 600;
+  flex: 1;
+}
+
+.pricing-includes {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.pricing-includes li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.pricing-includes li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--green-light);
+  font-weight: 800;
+}
+
+.btn-pricing {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-weight: 800;
+  font-size: 0.95rem;
+  background: transparent;
+  color: var(--green-light);
+  border: 2px solid var(--green);
+  border-radius: 12px;
+  text-decoration: none;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  margin-top: 3.5rem;
+}
+
+.btn-pricing:hover {
+  background: var(--green);
+  color: var(--bg);
+}
+
+.btn-pricing-featured {
+  background: var(--green);
+  color: var(--bg);
+}
+
+.btn-pricing-featured:hover {
+  background: var(--green-light);
+  border-color: var(--green-light);
+  color: var(--bg);
+}
+
+/* Testimonials section (Xtract-style) */
+.testimonials-section {
+  padding: 6rem 0;
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.testimonial-card:hover {
+  border-color: var(--green);
+  box-shadow: 0 0 28px var(--green-glow), 0 0 0 1px var(--green-glow-strong);
+}
+
+.testimonial-quote {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.testimonial-author {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* FAQs section (Xtract-style) */
+.faqs-section {
+  padding: 6rem 0;
+  background: var(--bg-section);
+  border-top: 1px solid var(--border);
+}
+
+.faq-list {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 1.25rem 0;
+}
+
+.faq-item summary {
+  font-weight: 800;
+  color: var(--white);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  color: var(--green-light);
+  font-size: 1.25rem;
+}
+
+.faq-item[open] summary::after {
+  content: '−';
+}
+
+.faq-item p {
+  margin: 1rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+/* Final CTA section (Xtract-style) */
+.cta-section {
+  padding: 6rem 0;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.cta-heading {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--white);
+  margin: 0 0 0.75rem;
+  line-height: 1.2;
+}
+
+.cta-desc {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin: 0 auto 2rem;
+  max-width: 42ch;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--bg);
+  background: var(--green);
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.btn-cta:hover {
+  background: var(--green-light);
+  color: var(--bg);
+  box-shadow: 0 0 24px var(--green-glow);
 }
 
 /* Elevate / Challenges / Approach */
@@ -1225,10 +1667,21 @@ a:hover {
   border-top: 1px solid var(--border);
 }
 
+.footer-inner {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .footer .logo {
   display: inline-flex;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   font-size: 1.25rem;
 }
 
@@ -1236,12 +1689,44 @@ a:hover {
   color: var(--text-muted);
   margin: 0;
   font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  font-weight: 800;
+}
+
+.footer-links a:hover {
+  color: var(--green-light);
 }
 
 .footer-small {
-  margin-top: 1rem !important;
+  margin-top: 0.5rem !important;
   font-size: 0.85rem !important;
   opacity: 0.7;
+}
+
+@media (min-width: 640px) {
+  .footer-inner {
+    grid-template-columns: 1fr auto;
+    align-items: start;
+  }
+
+  .footer-links {
+    justify-content: flex-end;
+  }
+
+  .footer-small {
+    grid-column: 1 / -1;
+    margin-top: 1rem !important;
+  }
 }
 
 /* Mobile – larger headings for readability */
@@ -1316,11 +1801,21 @@ a:hover {
     padding: 6rem 0 4rem;
   }
 
-  .hero-cta {
+  .hero-cta,
+  .hero-cta-dual {
     flex-direction: column;
+  }
+
+  .hero-cta-dual .btn-hero,
+  .hero-cta-dual .btn-hero-outline {
+    width: 100%;
   }
 
   .btn {
     width: 100%;
+  }
+
+  .pricing-cards {
+    grid-template-columns: 1fr;
   }
 }
