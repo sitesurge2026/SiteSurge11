@@ -51,8 +51,7 @@ html {
 body {
   margin: 0;
   font-family: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 800;
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
