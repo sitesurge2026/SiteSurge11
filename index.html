@@ -53,6 +53,11 @@
     .price-value { font-size: 2rem; font-weight: 900; color: var(--green); }
     .monthly-value { color: var(--white); font-weight: bold; }
     .subtext { font-size: 0.8rem; display: block; margin-top: 0.25rem; color: var(--hero-lead); }
+    
+    @media (max-width: 900px) {
+      .responsive-grid-2 { grid-template-columns: 1fr !important; gap: 3rem !important; }
+      .responsive-grid-3 { grid-template-columns: 1fr !important; gap: 2rem !important; }
+    }
   </style>
 </head>
 <body>
@@ -76,7 +81,7 @@
     <!-- 1. Hero Section -->
     <section class="hero" style="padding: 12rem 0 8rem; text-align: left; position: relative;">
       <div class="container" style="max-width: 1200px;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div class="responsive-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
           <div class="hero-content">
             <h1 style="font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 1.5rem;">Stop Being Invisible.<br><span class="text-gradient">Start Converting.</span></h1>
             <p style="font-size: 1.15rem; color: var(--text-muted); max-width: 32ch; margin-bottom: 3rem; line-height: 1.6;">We bridge the gap between Google Search and your bottom line, turning passive visitors into high-value enquiries.</p>
@@ -107,8 +112,8 @@
        <div class="ambient-orb" style="width: 400px; height: 400px; top: -100px; right: -100px;"></div>
        <div class="container" style="max-width: 900px; text-align: center; position: relative; z-index: 1;">
           <h2 style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 6rem; color: var(--white);">Why Online Businesses Fail.</h2>
-                  <!-- Row 1: Invisible Business -->
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 8rem; text-align: left;">
+          <!-- Row 1: Invisible Business -->
+          <div class="responsive-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 8rem; text-align: left;">
              <div>
                 <!-- Invisible Ghost visual narrative -->
                 <div class="animation-container" style="justify-content: flex-start; margin-bottom: 1.5rem; width: 50px;">
@@ -179,7 +184,7 @@
           </div>
 
           <!-- Row 2: The Leaky Bucket -->
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; text-align: left;">
+          <div class="responsive-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; text-align: left;">
              
              <!-- Abstract Data Sieve -->
              <div class="hover-card" style="background: rgba(26,26,26,0.3); padding: 4rem; border-radius: 40px; border: 1px solid var(--border-light); display: flex; justify-content: center;">
@@ -216,7 +221,7 @@
           <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.6;">We don't just build websites; we build revenue engines. Here is the exact system we use to pull your business out of digital obscurity, cleanly plug your traffic leaks, and force an influx of qualified leads.</p>
         </div>
         
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+        <div class="responsive-grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
           <div class="hover-card" style="background: var(--bg-card); padding: 3rem; border-radius: 24px; border: 1px solid var(--border-light); border-top: 4px solid var(--green);">
             <div style="height: 48px; margin-bottom: 1.5rem;">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="float-icon" stroke="var(--green)" stroke-width="2">
