@@ -324,7 +324,7 @@ const Testimonial = () => (
         whileInView={{ opacity: 1 }}
         className="text-3xl md:text-5xl font-medium mb-20 italic leading-relaxed md:leading-snug"
       >
-        "The transformation was overnight. We went from being page 5 on Google to the first result for our main keywords. AURA didn't just build a site; they built a growth engine."
+        "The transformation was overnight. We went from being page 5 on Google to the first result for our main keywords. SiteSurge didn't just build a site; they built a growth engine."
       </motion.p>
       <div className="flex flex-col md:flex-row items-center justify-center gap-8">
         <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-primary neon-glow">
@@ -377,7 +377,7 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
       <div className="text-primary font-black text-2xl tracking-tighter">SITESURGE DIGITAL AGENCY</div>
       <div className="text-center md:text-left text-zinc-500 text-sm tracking-widest font-medium uppercase">
-        © 2026 AURA DIGITAL AGENCY. BUILT FOR THE FUTURE.
+        © 2026 SITESURGE DIGITAL AGENCY. BUILT FOR THE FUTURE.
       </div>
       <div className="flex gap-12 font-bold text-zinc-400">
         {['Instagram', 'LinkedIn', 'Twitter', 'Dribbble'].map(social => (
