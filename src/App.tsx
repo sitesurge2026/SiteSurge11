@@ -22,7 +22,7 @@ import {
   Play,
   X
 } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const IMAGES = {
   jupiter: "https://lh3.googleusercontent.com/aida-public/AB6AXuCiTZ9ddosL120hB5SFyDICN5XQtxs_hZSWQoucbi-Y5O7f8p7EjrKRx7cArnLKOObQnYfzmq47xOhdlW9nX3e1E5sFxCSh6fw2Jfr5vLi2h43UccM6Awe_XDmzLfgYe9Hx7TfiTKygWiXasK_NkL2U0K3BGUwyvXI09Pxk9GuT7ppynJetehae6lAfp_4uh6W5Loy4P4QK0D2tmuHOI_jWClOL0o3F--f6gZOcKJIeQIKNRzhYHqUyz9_tZncVrvWZtTlkYDCzuEBY",
@@ -85,25 +85,37 @@ const Navbar = () => {
   );
 };
 
-const Hero = () => (
-  <section className="relative min-h-[120vh] flex flex-col items-center justify-center text-center px-6 pt-24 overflow-hidden">
-    {/* Video Background */}
-    <div className="absolute inset-0 -z-20 overflow-hidden">
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-full object-cover"
-      >
-        <source 
-          src="https://assets.mixkit.co/videos/preview/mixkit-abstract-waves-of-white-smoke-on-a-black-background-26615-large.mp4" 
-          type="video/mp4" 
-        />
-      </video>
-    </div>
+const Hero = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
 
-    <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,rgba(163,255,0,0.1)_0%,transparent_70%)]"></div>
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.5; // Slow down the video to 50% speed
+    }
+  }, []);
+
+  return (
+    <section className="relative min-h-[120vh] flex flex-col items-center justify-center text-center px-6 pt-24 overflow-hidden">
+      {/* Video Background */}
+      <div className="absolute inset-0 -z-20 overflow-hidden bg-black">
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover object-center filter grayscale opacity-40"
+        >
+          <source 
+            src="/social_Sitesurge121_scroll_effect_on_each_of_the_screens_--ar_11_--m_576defd6-6119-4bea-a4aa-e933552116ec_0.mp4" 
+            type="video/mp4" 
+          />
+        </video>
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
+
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,rgba(163,255,0,0.1)_0%,transparent_70%)]"></div>
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -127,7 +139,8 @@ const Hero = () => (
       </div>
     </motion.div>
   </section>
-);
+  );
+};
 
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState<{title: string, sub: string, img: string, details?: string} | null>(null);
