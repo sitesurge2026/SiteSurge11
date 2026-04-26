@@ -45,14 +45,9 @@ const Navbar = () => (
         </a>
       ))}
     </div>
-    <a 
-      href="https://ais-dev-bhntcjvx7fmb3c5aqfgnmc-347621648439.europe-west2.run.app" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="bg-primary text-black px-8 py-3 rounded-2xl font-bold transition-transform hover:scale-105 active:scale-95 hover:brightness-110 text-lg"
-    >
+    <button className="bg-primary text-black px-8 py-3 rounded-2xl font-bold transition-transform hover:scale-105 active:scale-95 hover:brightness-110 text-lg">
       Let's Talk
-    </a>
+    </button>
   </nav>
 );
 
@@ -73,14 +68,9 @@ const Hero = () => (
         We transform invisible businesses into industry leaders through high-performance digital presence and strategic search dominance.
       </p>
       <div className="flex flex-col sm:flex-row gap-6 justify-center">
-        <a 
-          href="https://ais-dev-bhntcjvx7fmb3c5aqfgnmc-347621648439.europe-west2.run.app" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="bg-primary text-black px-10 py-5 rounded-2xl font-bold text-xl hover:neon-glow transition-all text-center inline-block"
-        >
+        <button className="bg-primary text-black px-10 py-5 rounded-2xl font-bold text-xl hover:neon-glow transition-all">
           Get Started
-        </a>
+        </button>
         <button className="glass-card text-white px-10 py-5 rounded-2xl font-bold text-xl hover:bg-white/10 transition-all">
           View Our Work
         </button>
@@ -370,14 +360,9 @@ const FinalCTA = () => (
           Stop settling for generic templates. Get a strategy that matches your ambition.
         </p>
         <div className="flex flex-col sm:flex-row gap-8 justify-center">
-          <a 
-            href="https://ais-dev-bhntcjvx7fmb3c5aqfgnmc-347621648439.europe-west2.run.app" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="bg-primary text-black px-14 py-7 rounded-2xl font-black text-2xl hover:neon-glow-strong transition-all text-center inline-block"
-          >
+          <button className="bg-primary text-black px-14 py-7 rounded-2xl font-black text-2xl hover:neon-glow-strong transition-all">
             Start Your Surge
-          </a>
+          </button>
           <button className="bg-white/5 border border-white/10 text-white px-14 py-7 rounded-2xl font-black text-2xl hover:bg-white/10 transition-all">
             Book Free Audit
           </button>
